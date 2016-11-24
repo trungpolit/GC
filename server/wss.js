@@ -43,6 +43,12 @@ var logger = new(winston.Logger)({
     exitOnError: false
 });
 
+var connections = require('./config/connections');
+var Waterline = require('waterline');
+var waterline = new Waterline();
+var User =  require('./models/User');
+
+
 var WebSocket = require('ws');
 const gsWss = 'ws://125.212.226.192:8850/';
 var ws1,
