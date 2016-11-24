@@ -1,0 +1,9 @@
+# User specific & automatically generated files #
+#################################################
+/node_modules
+
+# IDE and editor specific files #
+#################################
+/nbproject
+.idea
+
