@@ -43,11 +43,42 @@ var logger = new(winston.Logger)({
     exitOnError: false
 });
 
-var connections = require('./config/connections');
-var Waterline = require('waterline');
-var waterline = new Waterline();
-var User =  require('./models/User');
-
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/gc');
+var refId;
+var Schema = mongoose.Schema;
+var ObjectId = Schema.ObjectId;
+var messageSchema = new Schema({
+    ref_id: {
+        type: ObjectId,
+        default: null
+    },
+    type: Number,
+    payload: Array,
+    raw: String,
+    screenshot: String,
+    created: Date,
+    modified: Date
+});
+messageSchema.pre('save', function (next) {
+    if (!this.created) {
+        this.created = Date.now();
+    }
+    if (!this.id && !this.modified) {
+        this.modified = Date.now();
+    } else if (this.id && !this.modified) {
+        this.modified = Date.now();
+    }
+    // do stuff
+    next();
+});
+var Message = mongoose.model('Message', messageSchema);
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'Connect to database  error:'));
+db.once('open', function () {
+    // we're connected!
+    console.log('Connect to database successful.');
+});
 
 var WebSocket = require('ws');
 const gsWss = 'ws://125.212.226.192:8850/';
@@ -63,6 +94,17 @@ try {
         // set if the data was masked.
         console.log('Socket Received:%s', data);
         ws1.send(data);
+        var message = new Message({
+            ref_id: refId,
+            type: 1,
+            payload: JSON.parse(data),
+            raw: data
+        });
+        message.save(function (err, message, numAffected) {
+            if (err) {
+                logger.error('Can not save gs message to database!');
+            }
+        });
     });
     socket.on('close', function () {
         console.log('Socket Status:%s (Closed)', socket.readyState);
@@ -90,14 +132,27 @@ wss.on('connection', function connection(ws) {
     // or ws.upgradeReq.headers.cookie (see
     // http://stackoverflow.com/a/16395220/151312)
 
-    ws.on('message', function incoming(message) {
-        console.log('received: %s', message);
+    ws.on('message', function incoming(data) {
+        console.log('Client message was received: %s', data);
         try {
-            socket.send(message);
+            socket.send(data);
             console.log('Socket Sent:%s', message);
         } catch (exception) {
             console.log('Socket Sent Exception:%s', exception);
         }
+        refId = null;
+        var message = new Message({
+            type: 0,
+            payload: JSON.parse(data),
+            raw: data
+        });
+        message.save(function (err, message, numAffected) {
+            if (err) {
+                logger.error('Can not save client message to database!');
+            } else {
+                refId = message._id;
+            }
+        });
     });
 
 });

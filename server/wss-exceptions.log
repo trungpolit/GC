@@ -1,0 +1,84 @@
+2016-11-27T15:19:39.045Z - error: uncaughtException: ObjectId is not defined date=Sun Nov 27 2016 22:19:38 GMT+0700 (SE Asia Standard Time), pid=14384, uid=null, gid=null, cwd=E:\Work_House\Hack\gc\server, execPath=C:\Program Files (x86)\nodejs\node.exe, version=v6.7.0, argv=[C:\Program Files (x86)\nodejs\node.exe, E:\Work_House\Hack\gc\server\wss.js], rss=37945344, heapTotal=31494144, heapUsed=17074928, loadavg=[0, 0, 0], uptime=443184.0632049
+ReferenceError: ObjectId is not defined
+    at Object.<anonymous> (E:\Work_House\Hack\gc\server\wss.js:49:13)
+    at Module._compile (module.js:556:32)
+    at Object.Module._extensions..js (module.js:565:10)
+    at Module.load (module.js:473:32)
+    at tryModuleLoad (module.js:432:12)
+    at Function.Module._load (module.js:424:3)
+    at Module.runMain (module.js:590:10)
+    at run (bootstrap_node.js:394:7)
+    at startup (bootstrap_node.js:149:9)
+    at bootstrap_node.js:509:3
+2016-11-27T15:21:36.929Z - error: uncaughtException: ObjectId is not defined date=Sun Nov 27 2016 22:21:36 GMT+0700 (SE Asia Standard Time), pid=14028, uid=null, gid=null, cwd=E:\Work_House\Hack\gc\server, execPath=C:\Program Files (x86)\nodejs\node.exe, version=v6.7.0, argv=[C:\Program Files (x86)\nodejs\node.exe, E:\Work_House\Hack\gc\server\wss.js], rss=37982208, heapTotal=31494144, heapUsed=17076024, loadavg=[0, 0, 0], uptime=443301.9529094
+ReferenceError: ObjectId is not defined
+    at Object.<anonymous> (E:\Work_House\Hack\gc\server\wss.js:49:13)
+    at Module._compile (module.js:556:32)
+    at Object.Module._extensions..js (module.js:565:10)
+    at Module.load (module.js:473:32)
+    at tryModuleLoad (module.js:432:12)
+    at Function.Module._load (module.js:424:3)
+    at Module.runMain (module.js:590:10)
+    at run (bootstrap_node.js:394:7)
+    at startup (bootstrap_node.js:149:9)
+    at bootstrap_node.js:509:3
+2016-11-27T15:22:25.727Z - error: uncaughtException: ObjectId is not defined date=Sun Nov 27 2016 22:22:25 GMT+0700 (SE Asia Standard Time), pid=15304, uid=null, gid=null, cwd=E:\Work_House\Hack\gc\server, execPath=C:\Program Files (x86)\nodejs\node.exe, version=v6.7.0, argv=[C:\Program Files (x86)\nodejs\node.exe, E:\Work_House\Hack\gc\server\wss.js], rss=37953536, heapTotal=31494144, heapUsed=17070064, loadavg=[0, 0, 0], uptime=443350.7538652
+ReferenceError: ObjectId is not defined
+    at Object.<anonymous> (E:\Work_House\Hack\gc\server\wss.js:50:13)
+    at Module._compile (module.js:556:32)
+    at Object.Module._extensions..js (module.js:565:10)
+    at Module.load (module.js:473:32)
+    at tryModuleLoad (module.js:432:12)
+    at Function.Module._load (module.js:424:3)
+    at Module.runMain (module.js:590:10)
+    at run (bootstrap_node.js:394:7)
+    at startup (bootstrap_node.js:149:9)
+    at bootstrap_node.js:509:3
+2016-11-27T15:31:36.770Z - error: uncaughtException: ObjectId is not defined date=Sun Nov 27 2016 22:31:36 GMT+0700 (SE Asia Standard Time), pid=2180, uid=null, gid=null, cwd=E:\Work_House\Hack\gc\server, execPath=C:\Program Files (x86)\nodejs\node.exe, version=v6.7.0, argv=[C:\Program Files (x86)\nodejs\node.exe, E:\Work_House\Hack\gc\server\wss.js], rss=46395392, heapTotal=34639872, heapUsed=20762992, loadavg=[0, 0, 0], uptime=443901.7965096
+ReferenceError: ObjectId is not defined
+    at NativeConnection.<anonymous> (E:\Work_House\Hack\gc\server\wss.js:56:17)
+    at NativeConnection.g (events.js:291:16)
+    at emitNone (events.js:86:13)
+    at NativeConnection.emit (events.js:185:7)
+    at open (E:\Work_House\Hack\gc\server\node_modules\mongoose\lib\connection.js:572:11)
+    at NativeConnection.Connection.onOpen (E:\Work_House\Hack\gc\server\node_modules\mongoose\lib\connection.js:581:5)
+    at E:\Work_House\Hack\gc\server\node_modules\mongoose\lib\connection.js:541:11
+    at E:\Work_House\Hack\gc\server\node_modules\mongoose\lib\drivers\node-mongodb-native\connection.js:71:5
+    at E:\Work_House\Hack\gc\server\node_modules\mongodb\lib\db.js:232:5
+    at Server.connectHandler (E:\Work_House\Hack\gc\server\node_modules\mongodb\lib\server.js:333:7)
+    at Server.g (events.js:291:16)
+    at emitOne (events.js:96:13)
+    at Server.emit (events.js:188:7)
+    at E:\Work_House\Hack\gc\server\node_modules\mongodb-core\lib\topologies\server.js:283:14
+    at E:\Work_House\Hack\gc\server\node_modules\mongodb-core\lib\connection\pool.js:455:18
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+2016-11-27T15:35:18.954Z - error: uncaughtException: Invalid value for schema path `type` date=Sun Nov 27 2016 22:35:18 GMT+0700 (SE Asia Standard Time), pid=5844, uid=null, gid=null, cwd=E:\Work_House\Hack\gc\server, execPath=C:\Program Files (x86)\nodejs\node.exe, version=v6.7.0, argv=[C:\Program Files (x86)\nodejs\node.exe, E:\Work_House\Hack\gc\server\wss.js], rss=38248448, heapTotal=31494144, heapUsed=17151408, loadavg=[0, 0, 0], uptime=444123.979304
+TypeError: Invalid value for schema path `type`
+    at Schema.add (E:\Work_House\Hack\gc\server\node_modules\mongoose\lib\schema.js:405:13)
+    at new Schema (E:\Work_House\Hack\gc\server\node_modules\mongoose\lib\schema.js:100:10)
+    at Object.<anonymous> (E:\Work_House\Hack\gc\server\wss.js:49:21)
+    at Module._compile (module.js:556:32)
+    at Object.Module._extensions..js (module.js:565:10)
+    at Module.load (module.js:473:32)
+    at tryModuleLoad (module.js:432:12)
+    at Function.Module._load (module.js:424:3)
+    at Module.runMain (module.js:590:10)
+    at run (bootstrap_node.js:394:7)
+    at startup (bootstrap_node.js:149:9)
+    at bootstrap_node.js:509:3
+2016-11-27T16:06:30.606Z - error: uncaughtException: not opened date=Sun Nov 27 2016 23:06:30 GMT+0700 (SE Asia Standard Time), pid=16148, uid=null, gid=null, cwd=E:\Work_House\Hack\gc\server, execPath=C:\Program Files (x86)\nodejs\node.exe, version=v6.7.0, argv=[C:\Program Files (x86)\nodejs\node.exe, E:\Work_House\Hack\gc\server\wss.js], rss=40034304, heapTotal=25202688, heapUsed=19782928, loadavg=[0, 0, 0], uptime=445995.6223579
+Error: not opened
+    at WebSocket.send (E:\Work_House\Hack\gc\server\node_modules\ws\lib\WebSocket.js:219:16)
+    at WebSocket.<anonymous> (E:\Work_House\Hack\gc\server\wss.js:107:13)
+    at emitTwo (events.js:106:13)
+    at WebSocket.emit (events.js:191:7)
+    at Receiver.ontext (E:\Work_House\Hack\gc\server\node_modules\ws\lib\WebSocket.js:841:10)
+    at E:\Work_House\Hack\gc\server\node_modules\ws\lib\Receiver.js:536:18
+    at E:\Work_House\Hack\gc\server\node_modules\ws\lib\Receiver.js:368:7
+    at E:\Work_House\Hack\gc\server\node_modules\ws\lib\PerMessageDeflate.js:249:5
+    at afterWrite (_stream_writable.js:361:3)
+    at onwrite (_stream_writable.js:352:7)
+    at WritableState.onwrite (_stream_writable.js:89:5)
+    at afterTransform (_stream_transform.js:79:3)
+    at TransformState.afterTransform (_stream_transform.js:54:12)
+    at Zlib.callback (zlib.js:639:5)

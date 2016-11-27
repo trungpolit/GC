@@ -6,8 +6,7 @@
   "dependencies": {
     "express": "^4.14.0",
     "mkdirp": "^0.5.1",
-    "sails-mongo": "^0.12.1",
-    "waterline": "^0.11.6",
+    "mongoose": "^4.7.0",
     "winston": "^2.3.0",
     "ws": "^1.1.1"
   },
