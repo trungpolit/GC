@@ -9,6 +9,8 @@ XMLHttpRequest.prototype.open = function (method, url, async, user, password) {
     openProxy.call(this, method, urlProxy, async, user, password);
 }
 
+
+
 // var WebSocketProxy = window
 //     .WebSocket
 //     .bind({});
