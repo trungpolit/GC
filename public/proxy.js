@@ -8,19 +8,3 @@ XMLHttpRequest.prototype.open = function (method, url, async, user, password) {
     console.log('%s: %s', method, urlProxy);
     openProxy.call(this, method, urlProxy, async, user, password);
 }
-
-
-
-// var WebSocketProxy = window
-//     .WebSocket
-//     .bind({});
-// var WssUrlProxy = 'localhost:4080';
-
-// window.WebSocket = function (url, protocols) {
-//     console.log('WebSocket Origin:');
-//     console.log(url);
-//     var urlProxy = url.replace('125.212.226.192:8850', WssUrlProxy);
-//     console.log('WebSocket Proxy:');
-//     console.log(urlProxy);
-//     return new WebSocketProxy(urlProxy, protocols);
-// };
