@@ -136,7 +136,7 @@ wss.on('connection', function connection(ws) {
         console.log('Client message was received: %s', data);
         try {
             socket.send(data);
-            console.log('Socket Sent:%s', message);
+            console.log('Socket Sent:%s', data);
         } catch (exception) {
             console.log('Socket Sent Exception:%s', exception);
         }
