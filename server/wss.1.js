@@ -49,6 +49,7 @@ var refId;
 var Schema = mongoose.Schema;
 var ObjectId = Schema.ObjectId;
 var messageSchema = new Schema({
+    request_id: null,
     ref_id: {
         type: ObjectId,
         default: null
