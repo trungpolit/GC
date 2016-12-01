@@ -62,7 +62,8 @@ WebSocket.prototype.send = function (data) {
         console.log('WebSocket.prototype.send data:');
         console.log(data);
         console.log('Send data to watcherSocket for saving');
-        var screenshot = takeScreenshot(false);
+        var canvas = document.getElementById("gameCanvas");
+        var screenshot = canvas.toDataURL();
         var payload = parseWatcherData(requestId, data, screenshot, type);
         watcherSocket.send(payload);
     }

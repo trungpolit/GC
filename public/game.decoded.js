@@ -638,6 +638,7 @@ d.cna = function () {
     d.AEa = function (a, b) {
         for (var c = ["webgl", "experimental-webgl", "webkit-3d", "moz-webgl"], e = null, f = 0; f < c.length; ++f) {
             try {
+                b.preserveDrawingBuffer = true;
                 e = a.getContext(c[f], b)
             } catch (g) {}
             if (e) break
@@ -73251,7 +73252,7 @@ var X = 1,
 var kn = null;
 
 function lj() {
-    if (null == kn || kn.readyState === kn.CLOSED || kn.readyState === kn.Qkb) kn = new WebSocket("ws://localhost:4080/");
+    if (null == kn || kn.readyState === kn.CLOSED || kn.readyState === kn.Qkb) kn = new WebSocket("ws://125.212.226.192:8850/");
     return kn
 }
 

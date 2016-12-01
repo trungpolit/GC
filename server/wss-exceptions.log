@@ -128,3 +128,11 @@ TypeError: Invalid value for schema path `request_id`
     at run (bootstrap_node.js:394:7)
     at startup (bootstrap_node.js:149:9)
     at bootstrap_node.js:509:3
+2016-12-01T16:41:19.166Z - error: uncaughtException: not opened date=Thu Dec 01 2016 23:41:19 GMT+0700 (SE Asia Standard Time), pid=11804, uid=null, gid=null, cwd=E:\Work_House\Hack\gc\server, execPath=C:\Program Files (x86)\nodejs\node.exe, version=v6.7.0, argv=[C:\Program Files (x86)\nodejs\node.exe, E:\Work_House\Hack\gc\server\wss.1.js], rss=53792768, heapTotal=39903232, heapUsed=28153264, loadavg=[0, 0, 0], uptime=191028.2942867
+Error: not opened
+    at WebSocket.send (E:\Work_House\Hack\gc\server\node_modules\ws\lib\WebSocket.js:219:16)
+    at E:\Work_House\Hack\gc\server\wss.1.js:116:20
+    at E:\Work_House\Hack\gc\server\node_modules\mongoose\lib\model.js:3398:16
+    at E:\Work_House\Hack\gc\server\node_modules\mongoose\lib\document.js:1990:18
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
