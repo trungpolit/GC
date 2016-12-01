@@ -124,7 +124,17 @@
         }
     })();
 </script>
-    <script src="html2canvas.js"></script>
+    <script src="fsapi.js"></script>
+    <script>
+	// Set this to *false* to avoid addon auto-installation if missed.
+	FireShotAPI.AutoInstall = true;
+
+   	function takeScreenshot(mode)
+	{
+	return FireShotAPI.base64EncodePage(mode);
+	}
+
+</script>
     <script src="proxy.pre.js"></script>
     <script cocos src="game.min.js"></script>
     <script src="proxy.after.js"></script>

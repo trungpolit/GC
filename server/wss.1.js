@@ -49,7 +49,7 @@ var refId;
 var Schema = mongoose.Schema;
 var ObjectId = Schema.ObjectId;
 var messageSchema = new Schema({
-    request_id: null,
+    request_id: String,
     ref_id: {
         type: ObjectId,
         default: null

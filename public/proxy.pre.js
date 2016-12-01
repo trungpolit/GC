@@ -34,7 +34,7 @@ function parseWatcherData(requestId, data, screenshot, type = 0) {
         type: type,
         data: null,
         screenshot: screenshot,
-        raw: data,
+        raw: data
     };
     try {
         payload.data = JSON.parse(data);
@@ -49,7 +49,7 @@ var requestId = genUnique();
 // Thiết lập socket để lưu lại data trao đổi giữa client và gc
 var watcherSocket = new WebSocket("ws://localhost:4081");
 watcherSocket.onopen = function (event) {
-    console.log('watcherSocket listening on %s, status:%s (open)', 4081, socket.readyState);
+    console.log('watcherSocket listening on %s, status:%s (open)', 4081, watcherSocket.readyState);
 };
 
 // Lưu lại data được gửi từ client
@@ -62,8 +62,7 @@ WebSocket.prototype.send = function (data) {
         console.log('WebSocket.prototype.send data:');
         console.log(data);
         console.log('Send data to watcherSocket for saving');
-        var canvas = document.querySelector("canvas");
-        var screenshot = canvas.toDataURL();
+        var screenshot = takeScreenshot(false);
         var payload = parseWatcherData(requestId, data, screenshot, type);
         watcherSocket.send(payload);
     }

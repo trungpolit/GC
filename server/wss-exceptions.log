@@ -114,3 +114,17 @@ Error: not opened
     at afterTransform (_stream_transform.js:79:3)
     at TransformState.afterTransform (_stream_transform.js:54:12)
     at Zlib.callback (zlib.js:639:5)
+2016-12-01T14:07:12.458Z - error: uncaughtException: Invalid value for schema path `request_id` date=Thu Dec 01 2016 21:07:12 GMT+0700 (SE Asia Standard Time), pid=6360, uid=null, gid=null, cwd=E:\Work_House\Hack\gc\server, execPath=C:\Program Files (x86)\nodejs\node.exe, version=v6.7.0, argv=[C:\Program Files (x86)\nodejs\node.exe, E:\Work_House\Hack\gc\server\wss.1.js], rss=38338560, heapTotal=31494144, heapUsed=17124960, loadavg=[0, 0, 0], uptime=181781.606996
+TypeError: Invalid value for schema path `request_id`
+    at Schema.add (E:\Work_House\Hack\gc\server\node_modules\mongoose\lib\schema.js:405:13)
+    at new Schema (E:\Work_House\Hack\gc\server\node_modules\mongoose\lib\schema.js:100:10)
+    at Object.<anonymous> (E:\Work_House\Hack\gc\server\wss.1.js:51:21)
+    at Module._compile (module.js:556:32)
+    at Object.Module._extensions..js (module.js:565:10)
+    at Module.load (module.js:473:32)
+    at tryModuleLoad (module.js:432:12)
+    at Function.Module._load (module.js:424:3)
+    at Module.runMain (module.js:590:10)
+    at run (bootstrap_node.js:394:7)
+    at startup (bootstrap_node.js:149:9)
+    at bootstrap_node.js:509:3
